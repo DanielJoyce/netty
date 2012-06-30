@@ -239,6 +239,7 @@ public class CookieEncoder {
         sb.append((char) HttpCodecUtil.EQUALS);
         sb.append(val);
         sb.append((char) HttpCodecUtil.SEMICOLON);
+        sb.append((char) HttpCodecUtil.SP);
     }
 
     private static void addQuoted(StringBuilder sb, String name, String val) {
@@ -252,6 +253,7 @@ public class CookieEncoder {
         sb.append(val.replace("\\", "\\\\").replace("\"", "\\\""));
         sb.append((char) HttpCodecUtil.DOUBLE_QUOTE);
         sb.append((char) HttpCodecUtil.SEMICOLON);
+        sb.append((char) HttpCodecUtil.SP);
     }
 
     private static void add(StringBuilder sb, String name, int val) {
@@ -259,5 +261,6 @@ public class CookieEncoder {
         sb.append((char) HttpCodecUtil.EQUALS);
         sb.append(val);
         sb.append((char) HttpCodecUtil.SEMICOLON);
+        sb.append((char) HttpCodecUtil.SP);
     }
 }
